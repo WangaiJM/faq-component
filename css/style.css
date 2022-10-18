@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --dark-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  /* Background gradient */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  /* Text */
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  /* Dividers */
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.2rem;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, var(--soft-violet), var(--soft-blue));
+}
+img {
+  max-width: 100%;
+}
+.container {
+  height: 60%;
+  width: 65%;
+  margin: auto;
+  display: flex;
+  background-color: #fff;
+  padding: 5rem;
+  border-radius: 2rem;
+  box-shadow: 0 10px 50px 0 var(--dark-blue);
+}
+.left {
+  flex: 1;
+  align-self: center;
+  padding: 2rem;
+  background: url(./../images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+.right {
+  flex: 1;
+  padding: 2rem;
+}
+.right > h1 {
+  font-size: 3.6rem;
+  margin: 0 0 1rem 0;
+  color: var(--very-dark-grayish-blue);
+}
+.faq {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--light-grayish-blue);
+}
+.title {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  color: var(--dark-grayish-blue);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  cursor: pointer;
+}
+.faq p {
+  display: none;
+  color: var(--dark-grayish-blue);
+  padding: 0.8rem 0;
+}
+.faq.active .title {
+  font-weight: 700;
+  color: var(--very-dark-grayish-blue);
+  transition: transform 300ms linear;
+}
+.faq.active .title img {
+  transform: rotate(180deg);
+}
+.faq.active p {
+  display: block;
+}
+.faq-body {
+  width: 95%;
+}
